@@ -20,7 +20,6 @@ $app.controller('HomeController', ['ProductService', 'products',
     })();
 
     function addProduct() {
-      console.log(self.newProduct);
       ProductService.create(self.newProduct)
           .then(function(response) {
             self.products.push(response.data);
