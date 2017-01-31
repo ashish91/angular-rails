@@ -1,0 +1,20 @@
+<form style="margin-top:30px" class="form-inline">
+
+    <input type="text"
+           class="form-control mb-2 mr-sm-2 mb-sm-0"
+           placeholder="Name"
+           ng-model="product.name"/>
+
+    <input type="text"
+           class="form-control mb-2 mr-sm-2 mb-sm-0"
+           placeholder="Description"
+           ng-model="product.description"/>
+
+    <input type="number"
+           step="any"
+           class="form-control mb-2 mr-sm-2 mb-sm-0"
+           placeholder="Price"
+           ng-model="product.price"/>
+    <button ng-click="onSubmit()" class="btn btn-primary" ng-bind="buttonText"></button>
+    <button ng-if="onCancel" ng-click="onCancel()" class="btn btn-danger">Cancel</button>
+</form>

@@ -1,0 +1,22 @@
+<div class="page-header">
+    <h1>Products</h1>
+</div>
+
+<div ng-repeat="product in home.products">
+    <div ng-hide="home.isEditing($index)" class="input-inline">
+        <span>{{ product.name }}</span>
+        <span>{{ product.description }}</span>
+        <span>{{ product.price }}</span>
+        <span class="glyphicon glyphicon-pencil clickable-icon"
+              ng-click="home.editProduct($index)"></span>
+        <span class="glyphicon glyphicon-remove clickable-icon"
+              ng-click="home.deleteProduct($index)"></span>
+    </div>
+
+    <product ng-show="home.isEditing($index)" product="product"
+             on-submit="home.updateProduct($index)" button-text="Edit Product"
+             on-cancel="home.onCancel($index)">
+    </product>
+</div>
+
+<product product="home.newProduct" on-submit="home.addProduct()" button-text="Add Product"></product>
