@@ -1,5 +1,6 @@
-$app.config(['$stateProvider', '$urlRouterProvider',
-  function ($stateProvider, $urlRouterProvider) {
+$app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
+  function ($stateProvider, $urlRouterProvider, $locationProvider) {
+    $locationProvider.hashPrefix('');
     $stateProvider
         .state('home', {
           url: '/home',
