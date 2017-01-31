@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
   end
 
   def update
-    @product.update_attributes(product_params)
+    @product.update(product_params)
   end
 
   def destroy
